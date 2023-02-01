@@ -27,5 +27,5 @@ resource "aws_instance" "demo" {
 }
 
 output "web-address" {
-  value = "${aws_instance.demo.public_dns}:8080"
+  value = "${aws_instance.demo.public_ip}"
 }
