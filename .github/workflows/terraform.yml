@@ -31,6 +31,10 @@ jobs:
       - name: Terraform Validate
         id: validate
         run: terraform validate -no-color
+        
+      - name: Terraform output
+        id: output
+        run: terraform output > inventory.yml
 
       - name: Terraform Plan
         id: plan
