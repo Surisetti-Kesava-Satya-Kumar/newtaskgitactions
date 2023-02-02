@@ -26,5 +26,5 @@ resource "aws_instance" "demo" {
 }
 
 output "web-address" {
-  value = "${aws_instance.demo.public_ip}" > inventory.yml
+  value = "${aws_instance.demo.public_ip}"
 }
