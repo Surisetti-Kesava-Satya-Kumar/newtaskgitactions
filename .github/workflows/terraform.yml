@@ -32,9 +32,6 @@ jobs:
         id: validate
         run: terraform validate -no-color
         
-      - name: Terraform output
-        id: output
-        run: terraform output > inventory.yml
 
       - name: Terraform Plan
         id: plan
@@ -78,3 +75,7 @@ jobs:
       - name: Terraform Apply
         if: github.ref == 'refs/heads/main' && github.event_name == 'push'
         run: terraform apply -auto-approve -input=false
+        
+      - name: Terraform output
+        id: output
+        run: terraform output > inventory.yml
