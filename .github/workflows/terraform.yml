@@ -78,4 +78,4 @@ jobs:
         
       - name: Terraform output
         id: output
-        run: terraform output > inventory.yml
+        run: terraform output -json instance_ips > inventory.yml
